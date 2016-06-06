@@ -1,0 +1,29 @@
+Public Class Form4
+
+  
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If TextBox1.Text = Convert.ToString("1234") Then
+            Dim FileNum As Integer
+            FileNum = FreeFile()
+            '   FileOpen(FileNum, "score.txt", OpenMode.Output)
+            ' PrintLine(FileNum, "")
+            ' FileClose(FileNum)
+            Me.Close()
+            MessageBox.Show("Recordul s-a resetat!")
+
+        Else
+            MsgBox("Error password!!!")
+            Me.Close()
+            Form2.Show()
+        End If
+    End Sub
+
+    
+
+
+    Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+  
+End Class
